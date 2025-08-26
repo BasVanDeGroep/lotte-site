@@ -142,3 +142,5 @@ const skins = [
       'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198965894492A40096955149D14313047528892086541',
   },
 ];
+
+export default skins;
