@@ -168,7 +168,9 @@ function App() {
                 CT: CT_SKINS,
                 T: T_SKINS,
               }[activePage].map((skin) => (
-                <div
+                <a
+                  href={skin.inspect}
+                  target="_blank"
                   key={skin.item}
                   className="px-3 bg-primary/25 flex max-lg:flex-col gap-1.5 py-4 backdrop-blur-md border border-border rounded-[16px] w-full lg:w-[320px]"
                 >
@@ -186,7 +188,7 @@ function App() {
                       {getSkinWear(skin.float)} {skin.float}
                     </p>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </div>
