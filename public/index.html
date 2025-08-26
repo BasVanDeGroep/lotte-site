@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script src="Gradient.js"></script>
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#FF4BD8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Heyy on this website you can find all my socials and an introduction about me :3"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Lovey</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      max-width: 100vw;
+      overflow-x: hidden;
+    }
+    #gradient-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      --gradient-color-1: #9934eb;
+      --gradient-color-2: #ca13db;
+      --gradient-color-3: #eb34d9;
+      --gradient-color-4: #8400e9;
+    }
+  </style>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <canvas id="gradient-canvas" style="width: 100vw; height: 100vh"></canvas>
+
+    <script>
+      var gradient = new Gradient();
+      gradient.initGradient('#gradient-canvas');
+    </script>
+  </body>
+</html>
