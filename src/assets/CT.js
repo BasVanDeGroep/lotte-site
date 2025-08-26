@@ -34,7 +34,7 @@ const skins = [
   {
     image: 'JUNGLE',
     item: 'M4A1-S',
-    finish: 'Welcome To The Jungle',
+    finish: 'Welcome Jungle',
     float: 0.06,
     inspect:
       'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198965894492A44862193246D2801919164524214056',
