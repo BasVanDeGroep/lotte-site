@@ -10,7 +10,7 @@ const skins = [
   {
     image: 'P2',
     item: 'Butterfly Knife',
-    finish: 'Doppler-Phase 2',
+    finish: 'Phase 2',
     float: 0.01,
     inspect:
       'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198965894492A43274624344D7369265788865276501',

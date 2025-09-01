@@ -119,7 +119,7 @@ function App() {
                   <ExternalIcon className="w-6 max-md:hidden" />
                 </div>
                 <div className={CLASS.BUTTON_TEXT}>
-                  <p className="font-[300]">X</p>
+                  <p className="font-[300]">Twitter</p>
                   <p className="font-[400]">BakaLovey</p>
                 </div>
               </a>
@@ -189,12 +189,12 @@ function App() {
                   </h1>
                   <p className="opacity-60 font-[400]">Full Loadout</p>
                 </div>
-                <div className="absolute max-lg:right-20 lg:bottom-0 z-10">
+                <div className="absolute max-lg:right-20 lg:bottom-0">
                   <img
                     src={`${activePage}_AGENT.png`}
-                    className="w-[360px]  lg:min-w-[400px]"
+                    className="w-[360px]  lg:min-w-[400px] relative z-[15]"
                   />
-                  <div className="absolute -translate-x-1/2 left-1/2 -translate-y-1/2 top-1/2">
+                  <div className="absolute -translate-x-1/2 left-1/2 -translate-y-1/2 top-1/2 z-[10]">
                     <img
                       src={`${activePage}.png`}
                       className="min-w-[440px] mix-blend-color-dodge"
@@ -221,7 +221,7 @@ function App() {
                   key={skin.item}
                   className="px-3 bg-primary/25 hover:border-white transition-colors flex max-md:flex-col gap-3 py-4 md:items-center backdrop-blur-lg border-[2px] border-border rounded-[16px] w-full"
                 >
-                  <div className="w-full md:w-[128px]">
+                  <div className="w-full md:w-[112px]">
                     <img src={`/skins/${skin.image}.png`} />
                   </div>
                   <div className="space-y-1.5 md:space-y-4">
@@ -229,7 +229,9 @@ function App() {
                       <p className="text-white/80 text-xs font-[300]">
                         {skin.item}
                       </p>
-                      <p className="md:text-lg font-[700]">{skin.finish}</p>
+                      <p className="md:text-lg leading-[120%] lg:leading-[120%] font-[700]">
+                        {skin.finish}
+                      </p>
                     </div>
                     <p className="text-xs font-[400] text-white/80">
                       {getSkinWear(skin.float)} {skin.float}

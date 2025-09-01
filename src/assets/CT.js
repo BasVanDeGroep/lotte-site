@@ -9,8 +9,8 @@ const skins = [
   },
   {
     image: 'RUBY',
-    item: 'M9 Karambit',
-    finish: 'Doppler (Ruby)',
+    item: 'M9 Bayonet',
+    finish: 'Ruby',
     float: 0.01,
     inspect:
       'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%200018FC03209F032806300338F8879AE50340AD050E512B1A',
