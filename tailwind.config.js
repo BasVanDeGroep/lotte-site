@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         border: '#ff00ee',
         primary: '#f64ab8',
+        bg: '#C534DD',
       },
       aspectRatio: {
         '62/46': '62/46',
@@ -19,6 +20,8 @@ module.exports = {
           'radial-gradient(27.22% 50% at 50% 50%, rgba(206, 113, 185, 0.20) 0%, rgba(78, 30, 67, 0.00) 100%), linear-gradient(180deg, #920072 0%, rgba(123, 18, 100, 0.85) 40.63%)',
         'gradient-card-hover':
           'linear-gradient(180deg, #16041E 0%, rgba(60, 0, 88, 0.85) 40.63%)',
+        'gradient-loadout-cover':
+          'linear-gradient(180deg, rgba(197, 52, 221, 0.00) 0%, #C534DD 100%)',
       },
       boxShadow: {
         glow: '0px 0px 32px 0px rgba(238, 135, 255, 0.25)',
