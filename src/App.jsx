@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import './App.css';
 import {
   ArrowLeft,
+  CloseIcon,
   DiscordIcon,
   ExternalIcon,
   SteamIcon,
@@ -12,6 +13,7 @@ import {
   XIcon,
 } from './assets/Icons';
 
+import SETUP from './assets/SETUP';
 import CT_SKINS from './assets/CT';
 import T_SKINS from './assets/T';
 
@@ -42,6 +44,19 @@ function getSkinWear(wear) {
 
 function App() {
   const [activePage, setActivePage] = useState('idle');
+  const [setupPage, setSetupPage] = useState({
+    hover: 'idle',
+    page: 'idle',
+  });
+
+  const CloseButton = () => (
+    <button
+      onClick={() => setSetupPage({ ...setupPage, page: 'idle' })}
+      className="absolute w-16 flex items-center justify-center pr-1 aspect-square top-5 right-5 rounded-lg border-[2px] hover:bg-white hover:text-primary transition-colors border-white/40 bg-white/10 backdrop-blur-[24px]"
+    >
+      <CloseIcon className="w-5" />
+    </button>
+  );
 
   return (
     <div className="min-h-screen w-screen flex flex-col justify-center max-lg:pt-4 max-lg:pb-8">
@@ -97,6 +112,7 @@ function App() {
               {/*Setup CARD*/}
               <button
                 className={twMerge(CLASS.CARD, 'sm:col-span-2 lg:col-span-1')}
+                onClick={() => setActivePage('SETUP')}
               >
                 <div className={CLASS.CARD_TEXT}>
                   <h1 className={CLASS.CARD_H}>MY SETUP</h1>
@@ -242,6 +258,95 @@ function App() {
             </div>
           </motion.div>
         </AnimatePresence>
+      )}
+      {activePage === 'SETUP' && (
+        <div className="max-h-screen aspect-[1440/1080] mx-auto relative ">
+          <button
+            onClick={() => setActivePage('idle')}
+            className="absolute w-16 flex items-center z-40 justify-center pr-1 aspect-square top-5 left-5 rounded-lg border-[2px] hover:bg-white hover:text-primary transition-colors border-white/40 bg-white/10 backdrop-blur-[24px]"
+          >
+            <CloseIcon className="w-5" />
+          </button>
+          <AnimatePresence>
+            {setupPage.page === 'pc' && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 100 }}
+                exit={{ opacity: 0 }}
+                className="absolute z-50 inset-0"
+              >
+                <CloseButton />
+                <div className="absolute p-6 space-y-8 border-[2px] rounded-2xl bg-white/10 backdrop-blur-[24px] right-5 bottom-5 border-white/40">
+                  {Object.entries(SETUP.PC).map(([k, v]) => (
+                    <div className="space-y-1">
+                      <p className="font-medium text-sm uppercase">{k}</p>
+                      <p className="font-black">{v}</p>
+                    </div>
+                  ))}
+                </div>
+                <img src="CLOSEUP_PC.JPG" className="h-full" />
+              </motion.div>
+            )}
+            {setupPage.page === 'kb' && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 100 }}
+                exit={{ opacity: 0 }}
+                className="absolute z-50 inset-0"
+              >
+                <CloseButton />
+                <div className="absolute p-6 space-y-8 border-[2px] rounded-2xl bg-white/10 backdrop-blur-[24px] right-5 bottom-5 border-white/40">
+                  {Object.entries(SETUP.KB).map(([k, v]) => (
+                    <div className="space-y-1">
+                      <p className="font-medium text-sm uppercase">{k}</p>
+                      <p className="font-black">{v}</p>
+                    </div>
+                  ))}
+                </div>
+                <img src="CLOSEUP_KB.JPG" className="h-full" />
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          {/* <button
+            className="absolute h-[50%] w-[25%] left-[0] top-[15%] z-30"
+            onClick={() => setSetupPage({ ...setupPage, page: 'misc' })}
+            onMouseEnter={() => setSetupPage({ ...setupPage, hover: 'misc' })}
+            onMouseLeave={() => setSetupPage({ ...setupPage, hover: 'idle' })}
+          /> */}
+          <button
+            className="absolute h-[20%] w-[15%] left-[43%] top-[36%] z-30 "
+            onClick={() => setSetupPage({ ...setupPage, page: 'pc' })}
+            onMouseEnter={() => setSetupPage({ ...setupPage, hover: 'pc' })}
+            onMouseLeave={() => setSetupPage({ ...setupPage, hover: 'idle' })}
+          />
+          <button
+            onClick={() => setSetupPage({ ...setupPage, page: 'kb' })}
+            className="absolute h-[14%] w-[50%] left-[20%] top-[85%] z-30  "
+            onMouseEnter={() => setSetupPage({ ...setupPage, hover: 'kb' })}
+            onMouseLeave={() => setSetupPage({ ...setupPage, hover: 'idle' })}
+          />
+          <button
+            className="absolute w-[48%] h-[28%] left-[25%] top-[50%] z-20"
+            onClick={() => setSetupPage({ ...setupPage, page: 'monitor' })}
+            onMouseEnter={() =>
+              setSetupPage({ ...setupPage, hover: 'monitor' })
+            }
+            onMouseLeave={() => setSetupPage({ ...setupPage, hover: 'idle' })}
+          />
+          <div
+            className={twMerge(
+              'w-full h-full transition-opacity absolute inset-0 bg-[#2F002F]/60 z-10 opacity-0',
+              !(setupPage.hover === 'idle') && 'opacity-100'
+            )}
+          >
+            <img
+              src={`HOVER_${setupPage.hover.toUpperCase()}.png`}
+              className="h-full"
+            />
+          </div>
+          <img src="SETUP.JPG" className="h-full" />
+        </div>
       )}
     </div>
   );
