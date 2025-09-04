@@ -114,7 +114,7 @@ const skins = [
   {
     image: 'USP',
     item: 'USP-S',
-    finish: 'Printstream',
+    finish: 'The Traitor',
     float: 0.33,
     inspect:
       'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198965894492A43274463497D5098191644427917737',

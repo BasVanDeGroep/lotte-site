@@ -89,10 +89,10 @@ function App() {
                 </div>
                 <div className={CLASS.CARD_IMAGE_WRAPPER}>
                   <img
-                    src="/CT_AGENT.png"
+                    src="/CT_AGENT.webp"
                     className="absolute -translate-x-1/2 left-1/2 max-lg:-top-4 max-lg:w-[180px] lg:-bottom-10 z-10 max-h-[648px] group-hover:scale-105 transition-transform"
                   />
-                  <img src="/CT.png" className={CLASS.CARD_SYMBOL} />
+                  <img src="/CT.webp" className={CLASS.CARD_SYMBOL} />
                 </div>
               </button>
               {/*T CARD*/}
@@ -103,10 +103,10 @@ function App() {
                 </div>
                 <div className={CLASS.CARD_IMAGE_WRAPPER}>
                   <img
-                    src="/T_AGENT.png"
+                    src="/T_AGENT.webp"
                     className="absolute -translate-x-1/2  left-1/2 max-lg:-top-16 max-lg:w-[180px] lg:-bottom-4 z-10 group-hover:scale-105 transition-transform"
                   />
-                  <img src="/T.png" className={CLASS.CARD_SYMBOL} />
+                  <img src="/T.webp" className={CLASS.CARD_SYMBOL} />
                 </div>
               </button>
               {/*Setup CARD*/}
@@ -119,7 +119,7 @@ function App() {
                   <p className={CLASS.CARD_P}>My Desk & Hardware</p>
                 </div>
                 <img
-                  src="/setup.jpg"
+                  src="/setup.webp"
                   className="absolute max-lg:opacity-50 inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform"
                 />
               </button>
@@ -207,12 +207,12 @@ function App() {
                 </div>
                 <div className="absolute max-lg:right-20 lg:bottom-0">
                   <img
-                    src={`${activePage}_AGENT.png`}
+                    src={`${activePage}_AGENT.webp`}
                     className="w-[360px]  lg:min-w-[400px] relative z-[15]"
                   />
                   <div className="absolute -translate-x-1/2 left-1/2 -translate-y-1/2 top-1/2 z-[10]">
                     <img
-                      src={`${activePage}.png`}
+                      src={`${activePage}.webp`}
                       className="min-w-[440px] mix-blend-color-dodge"
                     />
                   </div>
@@ -238,7 +238,7 @@ function App() {
                   className="px-3 bg-primary/25 hover:border-white transition-colors flex max-md:flex-col gap-3 py-4 md:items-center backdrop-blur-lg border-[2px] border-border rounded-[16px] w-full"
                 >
                   <div className="w-full md:w-[112px]">
-                    <img src={`/skins/${skin.image}.png`} />
+                    <img src={`/skins/${skin.image}.webp`} />
                   </div>
                   <div className="space-y-1.5 md:space-y-4">
                     <div>
@@ -284,7 +284,7 @@ function App() {
                     </div>
                   ))}
                 </div>
-                <img src="CLOSEUP_PC.JPG" className="h-full" />
+                <img src="CLOSEUP_PC.webp" className="h-full" />
               </motion.div>
             )}
             {setupPage.page === 'kb' && (
@@ -303,7 +303,7 @@ function App() {
                     </div>
                   ))}
                 </div>
-                <img src="CLOSEUP_KB.JPG" className="h-full" />
+                <img src="CLOSEUP_KB.webp" className="h-full" />
               </motion.div>
             )}
           </AnimatePresence>
@@ -341,11 +341,11 @@ function App() {
             )}
           >
             <img
-              src={`HOVER_${setupPage.hover.toUpperCase()}.png`}
+              src={`HOVER_${setupPage.hover.toUpperCase()}.webp`}
               className="h-full"
             />
           </div>
-          <img src="SETUP.JPG" className="h-full" />
+          <img src="SETUP.webp" className="h-full" />
         </div>
       )}
     </div>
