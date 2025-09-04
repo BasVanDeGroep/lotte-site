@@ -345,7 +345,7 @@ function App() {
               className="h-full"
             />
           </div>
-          <img src="SETUP.webp" className="h-full" />
+          <img src="setup.webp" className="h-full" />
         </div>
       )}
     </div>
