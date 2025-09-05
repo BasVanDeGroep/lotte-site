@@ -3,7 +3,7 @@ const skins = [
     image: 'SLINGSHOT',
     item: 'Sport Gloves',
     finish: 'Slingshot',
-    float: 0.1,
+    float: 0.2,
     inspect:
       'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%200018A62720D94E2806300338F9A386EF0340CB0249471224',
   },
@@ -67,7 +67,7 @@ const skins = [
     image: 'AWPPRINT',
     item: 'AWP',
     finish: 'Printstream',
-    float: 0.11,
+    float: 0.01,
     inspect:
       'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198965894492A43450142514D3028716982251091041',
   },
@@ -115,9 +115,9 @@ const skins = [
     image: 'USP',
     item: 'USP-S',
     finish: 'The Traitor',
-    float: 0.33,
+    float: 0.01,
     inspect:
-      'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198965894492A43274463497D5098191644427917737',
+      'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000183D2090082806300438F5C5DADF034019A0523020',
   },
   {
     image: 'MUERTOS',

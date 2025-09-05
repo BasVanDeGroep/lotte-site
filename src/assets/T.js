@@ -3,7 +3,7 @@ const skins = [
     image: 'VICE',
     item: 'Sport Gloves',
     finish: 'Vice',
-    float: 0.15,
+    float: 0.151,
     inspect:
       'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198965894492A40008333522D5489642057086855120',
   },
@@ -43,7 +43,7 @@ const skins = [
     image: 'CRAKOW',
     item: 'AWP',
     finish: 'Crakow!',
-    float: 0.14,
+    float: 0.0,
     inspect:
       'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198965894492A40264829604D54230449836438697',
   },
@@ -59,7 +59,7 @@ const skins = [
     image: 'PULSE',
     item: 'SG 553',
     finish: 'Pulse',
-    float: 0.13,
+    float: 0.01,
     inspect:
       'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198965894492A45811740711D14871078117861239091',
   },
@@ -137,7 +137,7 @@ const skins = [
     image: 'KISS',
     item: 'Sawed-Off',
     finish: 'Kiss Love',
-    float: 0.09,
+    float: 0.001,
     inspect:
       'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198965894492A40096955149D14313047528892086541',
   },

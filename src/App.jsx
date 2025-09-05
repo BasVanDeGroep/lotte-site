@@ -260,7 +260,7 @@ function App() {
         </AnimatePresence>
       )}
       {activePage === 'SETUP' && (
-        <div className="max-h-screen aspect-[1440/1080] mx-auto relative ">
+        <div className="max-h-screen aspect-[192/108] mx-auto relative ">
           <button
             onClick={() => setActivePage('idle')}
             className="absolute w-16 flex items-center z-40 justify-center pr-1 aspect-square top-5 left-5 rounded-lg border-[2px] hover:bg-white hover:text-primary transition-colors border-white/40 bg-white/10 backdrop-blur-[24px]"
@@ -314,7 +314,7 @@ function App() {
             onMouseEnter={() => setSetupPage({ ...setupPage, hover: 'misc' })}
             onMouseLeave={() => setSetupPage({ ...setupPage, hover: 'idle' })}
           /> */}
-          <button
+          {/* <button
             className="absolute h-[20%] w-[15%] left-[43%] top-[36%] z-30 "
             onClick={() => setSetupPage({ ...setupPage, page: 'pc' })}
             onMouseEnter={() => setSetupPage({ ...setupPage, hover: 'pc' })}
@@ -333,7 +333,7 @@ function App() {
               setSetupPage({ ...setupPage, hover: 'monitor' })
             }
             onMouseLeave={() => setSetupPage({ ...setupPage, hover: 'idle' })}
-          />
+          /> */}
           <div
             className={twMerge(
               'w-full h-full transition-opacity absolute inset-0 bg-[#2F002F]/60 z-10 opacity-0',
@@ -345,7 +345,7 @@ function App() {
               className="h-full"
             />
           </div>
-          <img src="setup.webp" className="h-full" />
+          <img src="setup.jpg" className="h-full" />
         </div>
       )}
     </div>
