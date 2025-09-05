@@ -260,7 +260,7 @@ function App() {
         </AnimatePresence>
       )}
       {activePage === 'SETUP' && (
-        <div className="max-h-screen aspect-[403/182] mx-auto relative ">
+        <div className="max-h-screen aspect-[4/2] mx-auto relative ">
           <button
             onClick={() => setActivePage('idle')}
             className="absolute w-16 flex items-center z-40 justify-center pr-1 aspect-square top-5 left-5 rounded-lg border-[2px] hover:bg-white hover:text-primary transition-colors border-white/40 bg-white/10 backdrop-blur-[24px]"
