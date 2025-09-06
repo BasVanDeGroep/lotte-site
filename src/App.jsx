@@ -36,7 +36,7 @@ function getSkinWear(wear) {
     throw new Error('Wear value must be between 0 and 1');
   }
   if (wear <= 0.07) return 'FN';
-  if (wear <= 0.15) return 'MW';
+  if (wear <= 0.149) return 'MW';
   if (wear <= 0.38) return 'FT';
   if (wear <= 0.45) return 'WW';
   return 'BS';
@@ -74,7 +74,8 @@ function App() {
                 Hey, I'm Lotte
               </h1>
               <p className="md:text-[18px] font-[400]">
-                I’m a 24 year old gamer that has been playing since 2006
+                I'm a 24 year old girl who loves to play CS2 and some other
+                variety games!
               </p>
             </div>
             <div className="grid h-max md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-6 flex-1 auto-rows-fr items-stretch">

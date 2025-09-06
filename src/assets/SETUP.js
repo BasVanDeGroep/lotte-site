@@ -18,12 +18,12 @@ const SETUP = {
   },
   MISC: {
     Drone: 'DJI mavic Min',
-    'Headphones Left': 'Steelseries Arctis Pro Wireless, ',
+    'Headphones Left': 'Steelseries Arctis Pro Wireless',
     'Headphones Right': 'Astro A50',
     'Controller Left': 'Scuf Reflex FPS',
     'Controller Middle': 'Scuf PS4 Controller',
     'Controller Right': 'Astro C40',
-    Mice: 'Finalmouse Ninja Air58 Red and Blue,',
+    Mice: 'Finalmouse Ninja Air58 Red and Blue',
     Keyboard: 'Matrix 3.0 ',
   },
   MONITORS: {

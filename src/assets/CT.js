@@ -3,7 +3,7 @@ const skins = [
     image: 'SLINGSHOT',
     item: 'Sport Gloves',
     finish: 'Slingshot',
-    float: 0.2,
+    float: 0.12,
     inspect:
       'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%200018A62720D94E2806300338F9A386EF0340CB0249471224',
   },

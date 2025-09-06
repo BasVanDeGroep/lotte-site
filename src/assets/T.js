@@ -43,7 +43,7 @@ const skins = [
     image: 'CRAKOW',
     item: 'AWP',
     finish: 'Crakow!',
-    float: 0.0,
+    float: 0.01,
     inspect:
       'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198965894492A40264829604D54230449836438697',
   },
