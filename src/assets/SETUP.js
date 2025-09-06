@@ -16,6 +16,20 @@ const SETUP = {
     DAC: 'Zen Dac V2',
     Headphones: 'Hifiman Arya',
   },
+  MISC: {
+    Drone: 'DJI mavic Min',
+    'Headphones Left': 'Steelseries Arctis Pro Wireless, ',
+    'Headphones Right': 'Astro A50',
+    'Controller Left': 'Scuf Reflex FPS',
+    'Controller Middle': 'Scuf PS4 Controller',
+    'Controller Right': 'Astro C40',
+    Mice: 'Finalmouse Ninja Air58 Red and Blue,',
+    Keyboard: 'Matrix 3.0 ',
+  },
+  MONITORS: {
+    'Side Monitors': 'Dell U2424H',
+    'Primary Monitor': 'PG27UCDM',
+  },
 };
 
 export default SETUP;

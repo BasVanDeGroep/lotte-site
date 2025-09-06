@@ -52,7 +52,7 @@ function App() {
   const CloseButton = () => (
     <button
       onClick={() => setSetupPage({ ...setupPage, page: 'idle' })}
-      className="absolute w-16 flex items-center justify-center pr-1 aspect-square top-5 right-5 rounded-lg border-[2px] hover:bg-white hover:text-primary transition-colors border-white/40 bg-white/10 backdrop-blur-[24px]"
+      className="absolute w-16 flex items-center justify-center pr-1 aspect-square top-5 left-5 rounded-lg border-[2px] hover:bg-white hover:text-primary transition-colors border-white/40 bg-white/10 backdrop-blur-[24px]"
     >
       <CloseIcon className="w-5" />
     </button>
@@ -306,16 +306,53 @@ function App() {
                 <img src="CLOSEUP_KB.webp" className="h-full" />
               </motion.div>
             )}
+            {setupPage.page === 'misc' && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 100 }}
+                exit={{ opacity: 0 }}
+                className="absolute z-50 inset-0"
+              >
+                <CloseButton />
+                <div className="absolute p-6 space-y-8 border-[2px] rounded-2xl bg-white/10 backdrop-blur-[24px] right-5 bottom-5 border-white/40">
+                  {Object.entries(SETUP.MISC).map(([k, v]) => (
+                    <div className="space-y-1">
+                      <p className="font-medium text-sm uppercase">{k}</p>
+                      <p className="font-black">{v}</p>
+                    </div>
+                  ))}
+                </div>
+                <img src="CLOSUP_MISC.webp" className="h-full" />
+              </motion.div>
+            )}
+            {setupPage.page === 'monitors' && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 100 }}
+                exit={{ opacity: 0 }}
+                className="absolute z-50 inset-0"
+              >
+                <CloseButton />
+                <div className="absolute p-6 space-y-8 border-[2px] rounded-2xl bg-white/10 backdrop-blur-[24px] right-5 bottom-5 border-white/40">
+                  {Object.entries(SETUP.MONITORS).map(([k, v]) => (
+                    <div className="space-y-1">
+                      <p className="font-medium text-sm uppercase">{k}</p>
+                      <p className="font-black">{v}</p>
+                    </div>
+                  ))}
+                </div>
+                <img src="CLOSEUP_MONITORS.webp" className="h-full" />
+              </motion.div>
+            )}
           </AnimatePresence>
-
-          {/* <button
+          <button
             className="absolute h-[50%] w-[25%] left-[0] top-[15%] z-30"
             onClick={() => setSetupPage({ ...setupPage, page: 'misc' })}
             onMouseEnter={() => setSetupPage({ ...setupPage, hover: 'misc' })}
             onMouseLeave={() => setSetupPage({ ...setupPage, hover: 'idle' })}
-          /> */}
-          {/* <button
-            className="absolute h-[20%] w-[15%] left-[43%] top-[36%] z-30 "
+          />
+          <button
+            className="absolute h-[25%] w-[15%] left-[43%] top-[20%] z-30 "
             onClick={() => setSetupPage({ ...setupPage, page: 'pc' })}
             onMouseEnter={() => setSetupPage({ ...setupPage, hover: 'pc' })}
             onMouseLeave={() => setSetupPage({ ...setupPage, hover: 'idle' })}
@@ -328,24 +365,21 @@ function App() {
           />
           <button
             className="absolute w-[48%] h-[28%] left-[25%] top-[50%] z-20"
-            onClick={() => setSetupPage({ ...setupPage, page: 'monitor' })}
+            onClick={() => setSetupPage({ ...setupPage, page: 'monitors' })}
             onMouseEnter={() =>
-              setSetupPage({ ...setupPage, hover: 'monitor' })
+              setSetupPage({ ...setupPage, hover: 'monitors' })
             }
             onMouseLeave={() => setSetupPage({ ...setupPage, hover: 'idle' })}
-          /> */}
+          />
           <div
             className={twMerge(
               'w-full h-full transition-opacity absolute inset-0 bg-[#2F002F]/60 z-10 opacity-0',
               !(setupPage.hover === 'idle') && 'opacity-100'
             )}
           >
-            <img
-              src={`HOVER_${setupPage.hover.toUpperCase()}.webp`}
-              className="h-full"
-            />
+            <img src={`SETUP_${setupPage.hover.toUpperCase()}.webp`} />
           </div>
-          <img src="test.jpg" className="h-full" />
+          <img src="setup.webp" className="h-full" />
         </div>
       )}
     </div>
