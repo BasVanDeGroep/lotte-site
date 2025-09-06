@@ -60,6 +60,7 @@ function App() {
 
   return (
     <div className="min-h-screen w-screen flex flex-col justify-center max-lg:pt-4 max-lg:pb-8">
+      <audio src="/music.mp3" autoPlay loop hidden />
       {activePage === 'idle' && (
         <AnimatePresence>
           <motion.div
